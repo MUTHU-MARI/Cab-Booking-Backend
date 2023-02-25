@@ -1,0 +1,17 @@
+-------------------------------------------------------------------------------
+Test set: com.example.demo.ProjectOla.ProjectOlaApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 5.743 s <<< FAILURE! - in com.example.demo.ProjectOla.ProjectOlaApplicationTests
+contextLoads  Time elapsed: 0.012 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext for [WebMergedContextConfiguration@3bac86a3 testClass = com.example.demo.ProjectOla.ProjectOlaApplicationTests, locations = [], classes = [com.example.demo.ProjectOla.ProjectOlaApplication], contextInitializerClasses = [], activeProfiles = [], propertySourceLocations = [], propertySourceProperties = ["org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true"], contextCustomizers = [org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@13d4992d, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@9573584, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@41005828, org.springframework.boot.test.autoconfigure.actuate.observability.ObservabilityContextCustomizerFactory$DisableObservabilityContextCustomizer@9da1, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@41ab013, org.springframework.boot.test.context.SpringBootTestAnnotation@73413ae5], resourceBasePath = "src/main/webapp", contextLoader = org.springframework.boot.test.context.SpringBootContextLoader, parent = null]
+Caused by: org.springframework.beans.factory.BeanCreationException: 
+Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Ambiguous mapping. Cannot map 'controllerCustDetails' method 
+com.example.demo.ProjectOla.Controller.ControllerCustDetails#deletecustDetails(int)
+to {DELETE [/deletecustdata]}: There is already 'controllerBooking' bean method
+com.example.demo.ProjectOla.Controller.ControllerBooking#deletebookingDetails(int) mapped.
+Caused by: java.lang.IllegalStateException: 
+Ambiguous mapping. Cannot map 'controllerCustDetails' method 
+com.example.demo.ProjectOla.Controller.ControllerCustDetails#deletecustDetails(int)
+to {DELETE [/deletecustdata]}: There is already 'controllerBooking' bean method
+com.example.demo.ProjectOla.Controller.ControllerBooking#deletebookingDetails(int) mapped.
+
